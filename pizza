@@ -1,0 +1,140 @@
+
+#!/bin/sh
+
+
+echo
+
+echo
+
+echo "                      ------Welcome to My Pizza!------"
+
+echo 
+
+echo
+
+echo
+
+echo "Please Type in your Name first:"
+
+echo
+
+read name
+
+echo
+
+echo "Hello $name, Please choose your order below:"
+
+
+echo
+
+echo "a.   Hawaiian --P150.00"
+
+echo "b.   Cheese --P120.00"
+
+echo "c.   Ham --P130.00"
+
+echo "d.   Mozarella --P160.00"
+
+echo "e.   Chocolate --P100.00"
+
+echo
+
+echo "Please input the letter of your choice. Thankyou."
+echo
+echo
+read choice
+
+
+
+while :
+
+do
+
+case $choice in
+
+	[a])
+
+		echo "You ordered Hawaiian and the price is P150.00"
+
+		echo
+		echo
+
+		echo "Please input the amount of your money."
+
+		echo
+
+		read amount
+
+
+
+if [[$amount -ge 150]]
+
+		then
+		echo
+		echo "Your change is "$(($150 - $amount))""
+		else
+		echo "Inavalid Amount. Please enter an amount greater than the price"
+		echo
+		fi
+
+		;;
+
+	[b])
+
+		echo "You ordered Cheese and the price is P120.00"
+
+		echo "Please input the amount of your money."
+
+		read changeB
+
+		;;
+
+	[c])
+
+		echo "You ordered Ham and the price is P130.00"
+
+		echo "Please input the amount of your money."
+
+		read changeC
+
+		;;
+
+	[d])
+
+		echo "You ordered Mozarella and the price is P160.00"
+
+		echo "Please input the amount of your money."
+
+		read changeD
+
+		;;
+
+	[e])
+
+		echo "You ordered Chocolate and the price is P100.00"
+
+		echo "Please input the amount of your money."
+
+		read changeE
+
+		;;
+
+	[0-9])
+
+		echo "Invalid!. Just type in from a-e."
+
+		;;
+
+	*)
+
+		echo "This is not in the choices. Please base your choice above. Thankyou."
+
+		read retry
+
+		;;
+
+
+
+esac
+
+done
